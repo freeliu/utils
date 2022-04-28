@@ -1,0 +1,19 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "front end development Commonly used codes ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeliu/utils.git"
+  },
+  "author": "freeliu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freeliu/utils/issues"
+  },
+  "homepage": "https://github.com/freeliu/utils#readme"
+}
