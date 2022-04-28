@@ -1,0 +1,85 @@
+$directions: row, column;
+$flex-wrap-options: wrap, nowrap, wrap-reverse;
+$justify-content-options: flex-start, flex-end, center, space-between, space-around;
+$align-options: auto, flex-start, flex-end, center, baseline, stretch;
+$align-content-options: flex-start, flex-end, center, space-between, space-around, space-around, stretch;
+$flex-grow-numbers: 0, 1, 2, 3, 4, 5, 6;
+$flex-shrink-numbers: 0, 1;
+@mixin d-flex{
+  display: flex;
+}
+
+.d-flex {
+ @include d-flex;
+  &-center{
+    @include d-flex;
+    align-items: center;
+    justify-content: center;
+    &-y{
+      @include d-flex;
+      align-items: center;
+    }
+  }
+}
+
+.flex-fill {
+  flex: 1 1 auto;
+}
+
+@each $direction in $directions {
+  .flex-direction-#{$direction} {
+    flex-direction: $direction;
+  }
+  .flex-direction-#{$direction}-reverse {
+    flex-direction:#{$direction}-reverse;
+  }
+}
+
+
+@each $option in $flex-wrap-options {
+  .flex-wrap-#{$option} {
+    flex-wrap: $option
+  }
+
+}
+
+
+@each $num in $flex-grow-numbers {
+  .flex-grow-#{$num}{
+    flex-grow: $num;
+  }
+}
+
+
+@each $num in $flex-shrink-numbers {
+  .flex-shrink-#{$num}{
+    flex-shrink: $num;
+  }
+}
+
+
+@each $option in $justify-content-options {
+  .justify-content-#{$option}{
+    justify-content: $option;
+  }
+}
+
+
+@each $option in $align-options {
+  @if($option != auto){
+    .align-items-#{$option}{
+      align-items: $option;
+    }
+  }
+  .align-self-#{$option}{
+    align-self: $option;
+  }
+}
+
+
+@each $option in $align-content-options {
+  .align-content-#{$option}{
+    align-content: $option;
+  }
+}
+

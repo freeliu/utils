@@ -1,10 +1,9 @@
 {
-  "name": "utils",
+  "name": "@freeliu/utils",
   "version": "1.0.0",
-  "description": "front end development Commonly used codes ",
-  "main": "index.js",
+  "description": "front end development Commonly used codes",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass src/style/flex.scss dist/style/flex.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/freeliu/utils/issues"
   },
-  "homepage": "https://github.com/freeliu/utils#readme"
+  "homepage": "https://github.com/freeliu/utils#readme",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
 }
